@@ -3,13 +3,8 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
-	// Use this for initialization
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+        //Set "Portrait" screen resolution
+        Screen.SetResolution(480, 852, false, 60);
 	}
 }
