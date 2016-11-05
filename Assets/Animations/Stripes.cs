@@ -37,7 +37,7 @@ public class Stripes : MonoBehaviour {
                 if (stripes[i].position.x >= 4f)
                 {
                     float rest = stripes[i].position.x - 4f;
-                    stripes[i].position = new Vector3(-8.8f + rest, transform.position.y, 0);
+                    stripes[i].position = new Vector3(-10.72f + rest, transform.position.y, 0);
                 }
             }
         }
@@ -53,7 +53,7 @@ public class Stripes : MonoBehaviour {
                 if (stripes[i].position.x <= -4f)
                 {
                     float rest = stripes[i].position.x + 4f;
-                    stripes[i].position = new Vector3(8.8f + rest, transform.position.y, 0);
+                    stripes[i].position = new Vector3(10.72f + rest, transform.position.y, 0);
                 }
             }
         }
