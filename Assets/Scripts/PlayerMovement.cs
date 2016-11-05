@@ -48,7 +48,8 @@ public class PlayerMovement : MonoBehaviour {
         //If the detected trigger has an other color then the Player -> Game Over
         if(other.tag != activeColor)
         {
-            Destroy(this.gameObject);
+            // Destroy(this.gameObject);
+            transform.position = new Vector3(0f, -3.25f, 0f);
         }
     }
 }
