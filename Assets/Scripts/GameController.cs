@@ -1,7 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
+
+	//The Points-text canvas
+	public Text pointsText;
+
+	//Points
+	private int points;
 
     //The 4 colors
     private Color[] colors;
@@ -34,5 +41,14 @@ public class GameController : MonoBehaviour {
         random = Random.Range(0, 4);
         sr.color = colors[random];
         player.GetComponent<PlayerMovement>().SendMessage("switchColor", random);
+
+		//Set points to 0
+		points = 0;
+		pointsText.text = points.ToString();
     }
+
+	void increasePoints() {
+		points++;
+		pointsText.text = points.ToString();
+	}
 }

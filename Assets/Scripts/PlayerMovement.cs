@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour {
     private Vector2 jumpForce = new Vector2(0, 300);
     Rigidbody2D rb;
 
+	//GameController GameObject
+	private GameController gc;
+
     //The 4 colors name as string to compare with obstacles' tag
     private string[] colorsName;
 
@@ -17,6 +20,7 @@ public class PlayerMovement : MonoBehaviour {
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+		gc = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ();
 
         //Set colors
         colorsName = new string[4];
@@ -44,9 +48,15 @@ public class PlayerMovement : MonoBehaviour {
 
     //Method to dectect Collision
     void OnTriggerEnter2D(Collider2D other)
-    {
+	{
+		//If the detected trigger is a start -> increase points
+		if (other.tag == "star") {
+			gc.SendMessage ("increasePoints");
+			//Destroy star
+			Destroy(other.gameObject);
+		}
         //If the detected trigger has an other color then the Player -> Game Over
-        if(other.tag != activeColor)
+        else if(other.tag != activeColor)
         {
             // Destroy(this.gameObject);
             transform.position = new Vector3(0f, -3.25f, 0f);
