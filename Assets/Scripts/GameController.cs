@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour {
         sr = player.GetComponent<SpriteRenderer>();
         random = Random.Range(0, 4);
         sr.color = colors[random];
-        player.GetComponent<PlayerMovement>().SendMessage("switchColor", random);
+        player.GetComponent<Player>().SendMessage("switchColor", random);
 
 		//Set points to 0
 		points = 0;
