@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour {
 
     // The force which is added when the player jumps
     // This can be changed in the Inspector window
-    private Vector2 jumpForce = new Vector2(0, 300);
+    private Vector2 jumpForce = new Vector2(0, 400);
     Rigidbody2D rb;
 
 	//GameController GameObject
@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour {
 
     //The active color
     private string activeColor;
+
+	//The jump counter
+	private int jumps;
 
     void Awake()
     {
@@ -28,6 +31,9 @@ public class PlayerMovement : MonoBehaviour {
         colorsName[1] = "pink";
         colorsName[2] = "yellow";
         colorsName[3] = "purple";
+
+		activeColor = "";
+		jumps = 0;
     }
 
     void Update()
@@ -37,7 +43,13 @@ public class PlayerMovement : MonoBehaviour {
         {
             rb.velocity = Vector2.zero;
             rb.AddForce(jumpForce);
+			jumps++;
         }
+
+		//If this is the first jump, jump higher
+		if (jumps == 1) {
+			jumpForce.y = 300;
+		}
     }
 
     //Method for switching the Player's color
@@ -60,6 +72,8 @@ public class PlayerMovement : MonoBehaviour {
         {
             // Destroy(this.gameObject);
             transform.position = new Vector3(0f, -3.25f, 0f);
+			jumps = 0;
+			jumpForce.y = 400;
         }
     }
 }
