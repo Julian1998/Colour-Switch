@@ -1,4 +1,4 @@
-<h1>Colour</h1>
+<h1>Colour Switch</h1>
 
 <hr />
 
