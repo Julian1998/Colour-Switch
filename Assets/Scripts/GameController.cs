@@ -31,14 +31,15 @@ public class GameController : MonoBehaviour {
 
         //Set colors
         colors = new Color[4];
-        colors[0] = new Color(48 / 255f, 228 / 255f, 242 / 255f, 1f); //cyan
+		colors[0] = new Color(245 / 255f, 222 / 255f, 22 /255f, 1f); //yellow
         colors[1] = new Color(244 / 255f, 5 / 255f, 132 / 255f, 1f); //pink
-        colors[2] = new Color(245 / 255f, 222 / 255f, 22 /255f, 1f); //yellow
+		colors[2] = new Color(48 / 255f, 228 / 255f, 242 / 255f, 1f); //cyan
         colors[3] = new Color(143 / 255f, 16 / 255f, 253 / 255f, 1f); //purple
 
         //Choose and set a random color to player
         sr = player.GetComponent<SpriteRenderer>();
-        random = Random.Range(0, 4);
+        //random = Random.Range(0, 4);
+		random = Random.Range(0, 2); //only yellow and pink
         sr.color = colors[random];
         player.GetComponent<Player>().SendMessage("switchColor", random);
 

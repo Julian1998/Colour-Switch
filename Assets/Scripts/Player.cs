@@ -27,9 +27,9 @@ public class Player : MonoBehaviour {
 
         //Set colors
         colorsName = new string[4];
-        colorsName[0] = "cyan";
+        colorsName[0] = "yellow";
         colorsName[1] = "pink";
-        colorsName[2] = "yellow";
+        colorsName[2] = "cyan";
         colorsName[3] = "purple";
 
 		activeColor = "";
