@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMovement : MonoBehaviour {
+public class Player : MonoBehaviour {
 
     // The force which is added when the player jumps
     // This can be changed in the Inspector window
@@ -27,9 +27,9 @@ public class PlayerMovement : MonoBehaviour {
 
         //Set colors
         colorsName = new string[4];
-        colorsName[0] = "cyan";
+        colorsName[0] = "yellow";
         colorsName[1] = "pink";
-        colorsName[2] = "yellow";
+        colorsName[2] = "cyan";
         colorsName[3] = "purple";
 
 		activeColor = "";
@@ -70,10 +70,14 @@ public class PlayerMovement : MonoBehaviour {
         //If the detected trigger has an other color then the Player -> Game Over
         else if(other.tag != activeColor)
         {
-            // Destroy(this.gameObject);
-            transform.position = new Vector3(0f, -3.25f, 0f);
-			jumps = 0;
-			jumpForce.y = 400;
+			gameOver();
         }
     }
+
+	void gameOver() {
+		// Destroy(this.gameObject);
+		transform.position = new Vector3(0f, -3.25f, 0f);
+		jumps = 0;
+		jumpForce.y = 400;
+	}
 }
