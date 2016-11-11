@@ -2,7 +2,7 @@
 
 <hr />
 
-The target of this project is to implement a clone of the famous mobile game "Color Switch" by Fortafy Games to get familiar with the distributed game development platforms Unity 5 and Github.
+The target of this project is to implement a clone of the famous mobile game "Color Switch" by Fortafy Games to get familiar with the distributed game development platform Unity 5 and Github.
 
 
 
