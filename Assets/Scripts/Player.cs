@@ -65,10 +65,10 @@ public class Player : MonoBehaviour {
 		if (other.tag == "star") {
 			gc.SendMessage ("increasePoints");
 			//Destroy star
-			Destroy(other.gameObject);
+			Destroy (other.gameObject);
 		}
-        //If the detected trigger has an other color then the Player -> Game Over
-        else if(other.tag != activeColor)
+        //If the detected trigger has an other color then the Player and is no color switcher -> Game Over
+		else if(other.tag != activeColor && other.tag != "switcher")
         {
 			gameOver();
         }
