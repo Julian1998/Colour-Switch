@@ -39,4 +39,5 @@ Sie sollten zeitlich felxibel, mobil und auch wochenends erreichbar sein. Bei Pr
 * Lösungsorientiertes und innovatives Denken und Handeln
 * Kenntnisse und Interesse an den aktuellsten Produkten (v.a. Microsoft)
 
-Wünschenswert wären außerdem Kenntnisse und Interesse an Themen wie Lastverteilung und Backup-Konzepten.  Ihr Gehalt erhalten Sie bevorzugt auf Rechnungsbasis. (Alternativen möglich.)  Wenn Sie sich angesprochen fühlen, schreiben Sie uns einfach eine kurze Mail oder richten Ihre Bewerbung an:           Herrn Max Heim
+Wünschenswert wären außerdem Kenntnisse und Interesse an Themen wie Lastverteilung und Backup-Konzepten.  Ihr Gehalt erhalten Sie bevorzugt auf Rechnungsbasis. (Alternativen möglich.)  Wenn Sie sich angesprochen fühlen, schreiben Sie uns einfach eine kurze Mail oder richten Ihre Bewerbung an:
+    * Herrn Max Heim
